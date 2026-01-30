@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.table {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+}
+
+.table th {
+    background-color: #e9ecef;
+}
+
+.table td, .table th {
+    padding: 10px;
+}
+
+.alert {
+    margin-top: 20px;
+}

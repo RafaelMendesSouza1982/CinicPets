@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Veterinários{% endblock %}
+
+{% block content %}
+<h1>Lista de Veterinários</h1>
+
+<form method="POST" action="/veterinarios/" class="mb-4">
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" required>
+    </div>
+    <div class="mb-3">
+        <label for="crmv" class="form-label">CRMV</label>
+        <input type="text" class="form-control" id="crmv" name="crmv" required>
+    </div>
+    <div class="mb-3">
+        <label for="especialidade" class="form-label">Especialidade</label>
+        <input type="text" class="form-control" id="especialidade" name="especialidade" required>
+    </div>
+    <div class="mb-3">
+        <label for="contato" class="form-label">Contato</label>
+        <input type="text" class="form-control" id="contato" name="contato" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar Veterinário</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>CRMV</th>
+            <th>Especialidade</th>
+            <th>Contato</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for veterinario in veterinarios %}
+        <tr>
+            <td>{{ veterinario.nome }}</td>
+            <td>{{ veterinario.crmv }}</td>
+            <td>{{ veterinario.especialidade }}</td>
+            <td>{{ veterinario.contato }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
